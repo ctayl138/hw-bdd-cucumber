@@ -689,3 +689,1052 @@ Completed 200 OK in 283ms (Views: 267.9ms | ActiveRecord: 2.8ms)
   [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (18.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
   [1m[36m (15.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (8.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (8.9ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (9.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (6.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/assets/rails.png" for 152.15.113.5 at 2015-11-10 15:16:01 +0000
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 15:16:05 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.9ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (34.3ms)
+Completed 200 OK in 122ms (Views: 89.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 15:16:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 15:16:08 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 15:16:08 +0000
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG%5D=1&ratings%5BR%5D=1&commit=Refresh" for 152.15.113.5 at 2015-11-10 15:16:39 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1" for 152.15.113.5 at 2015-11-10 15:16:39 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')
+  Rendered movies/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 15:16:39 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 15:16:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 15:16:39 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 15:16:39 +0000
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (6.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (10.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (8.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (11.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:01:58 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1" for 152.15.113.5 at 2015-11-10 16:01:59 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (44.5ms)
+Completed 200 OK in 288ms (Views: 275.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:02:14 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:02:14 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:15 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:15 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:15 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:15 +0000
+
+
+Started GET "/movies/16" for 152.15.113.5 at 2015-11-10 16:02:17 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered movies/show.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:17 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:17 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:17 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:17 +0000
+
+
+Started DELETE "/movies/16" for 152.15.113.5 at 2015-11-10 16:02:19 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OS98ZoMD1jIZRnWE6gf2424jY25X7ByoxkRHootCEC09yN2rE5EaN20gUj6DznABCJ81p8PptDjWrAuVek3MfA==", "id"=>"16"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 16]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 31ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:02:19 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:02:19 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:19 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:20 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:20 +0000
+
+
+Started GET "/movies/19" for 152.15.113.5 at 2015-11-10 16:02:22 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 19]]
+  Rendered movies/show.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:22 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:22 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:22 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:22 +0000
+
+
+Started DELETE "/movies/19" for 152.15.113.5 at 2015-11-10 16:02:23 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Mt5bllrDr/Xc28ErWw2zzub0GAwB0wKS+gzJ+sUaq7M2OfpbylFj8Ki95pEyxDUsgEhOxZXWqgLq5IXNNBV34g==", "id"=>"19"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 19]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 11ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:02:23 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:02:23 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:23 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:23 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:23 +0000
+
+
+Started GET "/movies/18" for 152.15.113.5 at 2015-11-10 16:02:27 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered movies/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:28 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:28 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:28 +0000
+
+
+Started DELETE "/movies/18" for 152.15.113.5 at 2015-11-10 16:02:29 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JrrCVDkECRGQfS0KhKBSybz4YW/wHZD3sETEfDrFkYwiXWOZqZbFFOQbCrDtadQr2kQ3pmQYOGegrIhLy8pN3Q==", "id"=>"18"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 18]]
+  [1m[36m (6.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 9ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:02:29 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:02:29 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:29 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:29 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:29 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:29 +0000
+
+
+Started GET "/movies/12" for 152.15.113.5 at 2015-11-10 16:02:32 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered movies/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:32 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:32 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:32 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:32 +0000
+
+
+Started DELETE "/movies/12" for 152.15.113.5 at 2015-11-10 16:02:33 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4MZtVX65GJ6YHom32m5+zojR9py5da6EanTDcdcqcj7kIcyY7ivUm+x4rg2zp/gs7m2gVS1wBhR6nI9GJiWubw==", "id"=>"12"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 12]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 12ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:02:33 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:02:34 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:34 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:34 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:34 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:34 +0000
+
+
+Started GET "/movies/13" for 152.15.113.5 at 2015-11-10 16:02:36 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered movies/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:36 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:36 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:36 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:36 +0000
+
+
+Started DELETE "/movies/13" for 152.15.113.5 at 2015-11-10 16:02:38 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iJfWdFCFTQnn0hhr+xdF3T9skfxbPogQse+GL7GMAWSMcHe5wBeBDJO0P9GS3sM/WdDHNc87IIChB8oYQIPdNQ==", "id"=>"13"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 13]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 11ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:02:38 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:02:38 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:02:38 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:38 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:02:38 +0000
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&commit=Refresh" for 152.15.113.5 at 2015-11-10 16:03:17 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"G"=>"1", "PG-13"=>"1", "NC-17"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:03:18 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG-13')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (123.9ms)
+Completed 200 OK in 141ms (Views: 138.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:18 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:18 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:18 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:18 +0000
+
+
+Started GET "/movies/17" for 152.15.113.5 at 2015-11-10 16:03:31 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 17]]
+  Rendered movies/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:31 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:31 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:31 +0000
+
+
+Started DELETE "/movies/17" for 152.15.113.5 at 2015-11-10 16:03:32 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iJ8/HAr3DfkAMRVUN2UVG66rW5UsNIluptSywjbwiMeMeJ7RmmXB/HRXMu5erJP5yBcNXLgxIf62PP71x/9Ulg==", "id"=>"17"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 17]]
+  [1m[35m (19.1ms)[0m  commit transaction
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 23ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:03:32 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:03:32 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG-13')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:32 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:32 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:32 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:32 +0000
+
+
+Started GET "/movies/11" for 152.15.113.5 at 2015-11-10 16:03:35 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered movies/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:35 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:35 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:35 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:35 +0000
+
+
+Started DELETE "/movies/11" for 152.15.113.5 at 2015-11-10 16:03:36 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"52PzMtWu4iM8Za7I+eTzqQ2idZwtk4sQXxY2PKNrb3bjhFL/RTwuJkgDiXKQLXVLax4jVbmWI4BP/noLUmSzJw==", "id"=>"11"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 11]]
+  [1m[35m (18.3ms)[0m  commit transaction
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 166ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:03:37 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:03:37 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG-13')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:37 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:37 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:37 +0000
+
+
+Started GET "/movies/20" for 152.15.113.5 at 2015-11-10 16:03:39 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 20]]
+  Rendered movies/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:39 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:39 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:39 +0000
+
+
+Started DELETE "/movies/20" for 152.15.113.5 at 2015-11-10 16:03:42 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"A9Xp15U+2Dh5eMup4jXY7fGNVB3ExUwpzy+GvDCTAMEHMkgaBawUPQ0e7BOL/F4PlzEC1FDA5Lnfx8qLwZzckA==", "id"=>"20"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 20]]
+  [1m[35m (10.1ms)[0m  commit transaction
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 14ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:03:42 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:03:42 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG-13')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:42 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:42 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:42 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:42 +0000
+
+
+Started GET "/movies/15" for 152.15.113.5 at 2015-11-10 16:03:45 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered movies/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:46 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:46 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:46 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:46 +0000
+
+
+Started DELETE "/movies/15" for 152.15.113.5 at 2015-11-10 16:03:47 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F3XT1Ea4ovI5ZCgCBb/CdxqXkrW0KP/8PvZ2RKFPF/sTknIZ1ipu900CD7hsdkSVfCvEfCAtV2wuHjpzUEDLqg==", "id"=>"15"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 15]]
+  [1m[35m (7.9ms)[0m  commit transaction
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 12ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:03:47 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:03:48 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG-13')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:48 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:48 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:48 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:48 +0000
+
+
+Started GET "/movies/14" for 152.15.113.5 at 2015-11-10 16:03:50 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered movies/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:51 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:51 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:51 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:51 +0000
+
+
+Started DELETE "/movies/14" for 152.15.113.5 at 2015-11-10 16:03:52 +0000
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CtaStIT1fjzXSLk2h5+Ezbdgo4Ho2zl/fcGZmAZDEggOMTN5FGeyOaMunozuVgIv0dz1SHzeke9tKdWv90zOWQ==", "id"=>"14"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 14]]
+  [1m[35m (8.7ms)[0m  commit transaction
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies
+Completed 302 Found in 13ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:03:52 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG-13%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:03:52 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG-13')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:03:52 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:52 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:52 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:03:52 +0000
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BPG%5D=1&ratings%5BR%5D=1&commit=Refresh" for 152.15.113.5 at 2015-11-10 16:04:03 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"PG"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:04:03 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:04:03 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:04:03 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:04:04 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:04:04 +0000
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&commit=Refresh" for 152.15.113.5 at 2015-11-10 16:04:56 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:04:56 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:04:56 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:04:56 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:04:56 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:04:56 +0000
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 152.15.113.5 at 2015-11-10 16:05:01 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:05:01 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:05:01 +0000
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:05:01 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:05:01 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:05:01 +0000
+  [1m[36m (10.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (10.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (5.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:25:36 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:25:36 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (65.5ms)
+Completed 200 OK in 341ms (Views: 318.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:26:03 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:26:03 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 152.15.113.5 at 2015-11-10 16:26:09 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:26:09 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:26:09 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:26:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:26:09 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:26:09 +0000
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BPG%5D=1&ratings%5BR%5D=1&commit=Refresh" for 152.15.113.5 at 2015-11-10 16:26:19 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"PG"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:26:19 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 52ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:26:19 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:26:19 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:26:19 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:26:19 +0000
+  [1m[36m (13.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (8.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (6.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-10 16:36:10 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:36:10 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (35.3ms)
+Completed 200 OK in 356ms (Views: 340.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BPG%5D=1&ratings%5BR%5D=1&commit=Refresh" for 152.15.113.5 at 2015-11-10 16:37:11 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"PG"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://ct-personal-2-ctayl138.c9.io/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=1&ratings%5BR%5D=1&sort=title" for 152.15.113.5 at 2015-11-10 16:37:12 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.5 at 2015-11-10 16:37:12 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:37:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:37:12 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.5 at 2015-11-10 16:37:12 +0000
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (11.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (6.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (10.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (6.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (8.6ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (8.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (5.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (8.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (8.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (12.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (10.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (8.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (7.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (5.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (6.7ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (6.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (5.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (5.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (9.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m

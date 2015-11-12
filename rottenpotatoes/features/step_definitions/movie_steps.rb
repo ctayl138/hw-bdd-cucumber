@@ -44,3 +44,10 @@ Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
   page.all('table#movies tbody tr', :count => 10)
 end
+
+
+Then /I should\s*(not)? see the following movies: (.*)/ do |negative, movie_list|
+  movie_list.split(',').each do |movie|
+    step %{I should#{negative ? " not" : ""} see "#{movie}"}
+  end
+end
